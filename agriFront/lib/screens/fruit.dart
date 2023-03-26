@@ -4,9 +4,9 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:marquee/marquee.dart';
 
-import '../componets/custom_page_route.dart';
-import '../models/product.model.dart';
-import '../services/api_service.dart';
+import 'componets/custom_page_route.dart';
+import 'models/product.model.dart';
+import 'services/api_service.dart';
 
 class FruitsService extends StatefulWidget {
   FruitsService({Key? key}) : super(key: key);
