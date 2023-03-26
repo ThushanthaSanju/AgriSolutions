@@ -336,8 +336,6 @@ Router.get("/getAllProducts", async (req, res) => {
 
 ////////////////////////////////////
 
-
-
 //Update
 
 Router.put("/:id", async (req, res) => {
@@ -360,29 +358,26 @@ Router.put("/:id", async (req, res) => {
   }
 });
 
-
-Router.get("/getFruits", async(req, res) =>{
-  try{
+Router.get("/getFruits", async (req, res) => {
+  try {
     const fruits = await products.find({ category: "Fruits" });
-        const sortedByCreationDate = fruits.sort(
-          (a, b) => b.createdAt - a.createdAt
-        );
-        res.send(sortedByCreationDate);
-
-  }catch(e){
+    const sortedByCreationDate = fruits.sort(
+      (a, b) => b.createdAt - a.createdAt
+    );
+    res.send(sortedByCreationDate);
+  } catch (e) {
     res.status(400).json({ msg: e.message, success: false });
   }
 });
 
-Router.get("/getVegi", async(req, res) =>{
-  try{
+Router.get("/getVegi", async (req, res) => {
+  try {
     const fruits = await products.find({ category: "Vegitables" });
-        const sortedByCreationDate = fruits.sort(
-          (a, b) => b.createdAt - a.createdAt
-        );
-        res.send(sortedByCreationDate);
-
-  }catch(e){
+    const sortedByCreationDate = fruits.sort(
+      (a, b) => b.createdAt - a.createdAt
+    );
+    res.send(sortedByCreationDate);
+  } catch (e) {
     res.status(400).json({ msg: e.message, success: false });
   }
 });
