@@ -55,20 +55,6 @@ class _BookingPageState extends State<RentCreatePage> {
     });
   }
 
-  // void _save() {
-  //   widget.bookingService
-  //       .updateIssue(products)
-  //       .then((value) => {
-  //             Fluttertoast.showToast(
-  //                 msg: 'Update Successfully',
-  //                 toastLength: Toast.LENGTH_LONG,
-  //                 fontSize: 20,
-  //                 backgroundColor: Colors.green),
-  //             Navigator.pop(context, 'Saved')
-  //           })
-  //       .catchError((err) => {print(err)});
-  // }
-
   void _cancel() {
     Fluttertoast.showToast(
         msg: 'Cancelled',
@@ -80,11 +66,6 @@ class _BookingPageState extends State<RentCreatePage> {
 
   @override
   Widget build(BuildContext context) {
-    // final routeData =
-    //     ModalRoute.of(context)!.settings.arguments as Map<String, Object>;
-    // final vehiName = routeData['vehicleName'];
-    // final driveName = routeData['drivername'];
-    // final pirceper = routeData['priceperh'];
     return Scaffold(
       // drawer: NevigationDrawer(),
       appBar: PreferredSize(
@@ -180,62 +161,6 @@ class _BookingPageState extends State<RentCreatePage> {
                                 )),
                           ),
                         ),
-                        // Padding(
-                        //   padding: const EdgeInsets.only(
-                        //       top: 8.0, bottom: 10.0),
-                        //   child: DropdownButtonHideUnderline(
-                        //     child: DropdownButtonFormField<String>(
-                        //       decoration: const InputDecoration(
-                        //         border: OutlineInputBorder(
-                        //             borderRadius: BorderRadius.all(
-                        //                 Radius.circular(90.0)),
-                        //             borderSide: BorderSide(
-                        //               color: Color.fromRGBO(
-                        //                   199, 158, 126, 173),
-                        //             )),
-                        //         enabled: true,
-                        //         enabledBorder: OutlineInputBorder(
-                        //             borderSide: BorderSide(
-                        //                 color: Color.fromARGB(
-                        //                     199, 158, 126, 173)),
-                        //             borderRadius: BorderRadius.all(
-                        //                 Radius.circular(25.0))),
-                        //         focusedBorder: OutlineInputBorder(
-                        //           borderRadius: BorderRadius.all(
-                        //               Radius.circular(90.0)),
-                        //           borderSide: BorderSide(
-                        //               color: Color.fromARGB(
-                        //                   199, 158, 126, 173)),
-                        //         ),
-                        //       ),
-                        //       validator: (value) {
-                        //         if (value!.isEmpty) {
-                        //           return "Gender can't be empty";
-                        //         }
-                        //         return null;
-                        //       },
-                        //       value: _genderController,
-                        //       icon: const Icon(Icons.arrow_downward),
-                        //       iconSize: 20,
-                        //       elevation: 10,
-                        //       style: const TextStyle(
-                        //           color: Colors.deepPurple),
-                        //       onChanged: (String? newValue) {
-                        //         setState(() {
-                        //           _genderController = newValue!;
-                        //         });
-                        //       },
-                        //       items: listOfStrings
-                        //           .map<DropdownMenuItem<String>>(
-                        //               (String value) {
-                        //         return DropdownMenuItem<String>(
-                        //           value: value,
-                        //           child: Text(value),
-                        //         );
-                        //       }).toList(),
-                        //     ),
-                        //   ),
-                        // ),
                         Padding(
                           padding: const EdgeInsets.only(top: 35.0),
                           child: TextFormField(
@@ -384,9 +309,7 @@ class _BookingPageState extends State<RentCreatePage> {
                       "priceperh": widget.priceperh,
                       "contactno": _contactnoController.text,
                       "hours": _hoursController.text,
-                      "address": _addressController.text,
-                      // "total":
-                      //     (widget.priceperh) * int.parse(_hoursController.text),
+                      "address": _addressController.text,    (widget.priceperh) * int.parse(_hoursController.text),
                     };
                     print(data);
                     var result = bookingInsert.post("/bookings/insert", data);

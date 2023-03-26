@@ -77,32 +77,8 @@ class _VehiclesPageState extends State<VehiclsService> {
                             ),
                             elevation: 3,
                             child: InkWell(
-                              // onTap: () => Navigator.of(context).push(
-                              //     CustomPageRoute(
-                              //         child: SocialSolutionUser(),
-                              //         direction: AxisDirection.right)),
                               child: Column(
                                 children: [
-                                  // Expanded(
-                                  //   child: Text(data.vehiclename.toString()),
-                                  //   // child: Image.network(
-                                  //   //   '${data.imageUrl}',
-                                  //   //   height: 100,
-                                  //   //   width: 100,
-                                  //   // ),
-                                  //   // Column(
-                                  //   //   children: [
-                                  //   //     Text(data.title.toString()),
-                                  //   //     Text(data.price.toString())
-                                  //   //   ],
-                                  //   // ),
-                                  //   // leading: CircleAvatar(
-                                  //   //     backgroundColor: Colors.white,
-                                  //   //     backgroundImage:
-                                  //   //         NetworkImage('${data.imageUrl}')),
-                                  //   // title: Text(data.title.toString()),
-                                  //   // subtitle: Text(data.price.toString()),
-                                  // ),
                                   Padding(
                                     padding: const EdgeInsets.only(
                                         left: 8.0,
