@@ -73,21 +73,6 @@ Router.put("/:id", async (req, res) => {
   }
 });
 
-// Router.get("/getFruits", async (req, res) => {
-//   try {
-//     const fruits = await Bookings.find({ category: "Bookings" });
-//     const sortedByCreationDate = fruits.sort(
-//       (a, b) => b.createdAt - a.createdAt
-//     );
-//     res.send(sortedByCreationDate);
-//   } catch (e) {
-//     res.status(400).json({ msg: e.message, success: false });
-//   }
-// });
-
-
-//////////////////////////////////////
-
 //Delete
 Router.delete("/:id", async (req, res) => {
   try {

@@ -28,15 +28,6 @@ class _BookingEditPageState extends State<BookingEditPage> {
       booking = widget.booking;
     });
   }
-
-  // void _getEmployees() {
-  //   widget.issueService.getAll().then((value) => {
-  //         setState(() {
-  //           issues = value;
-  //         })
-  //       });
-  // }
-
   void _save() {
     widget.issueService
         .updateBooking(booking)
